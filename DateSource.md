@@ -73,7 +73,5 @@ DataStream<Tuple2<String, Integer>> dataStream = env
         .sum(1);
 ```
 
-
-
-
-
+### 如果是自定义addSource
+大多数的场景数据都是无界的，会源源不断的过来，该类继承 RichSourceFunction，需要实现里面的 open、close、run、cancel 方法;
